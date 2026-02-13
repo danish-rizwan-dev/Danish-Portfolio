@@ -36,4 +36,8 @@ This portfolio is built using a modern, production-grade stack:
 
 1. **Clone the repository**:
    ```bash
+<<<<<<< HEAD
    git clone [https://github.com/danish-rizwan-dev/portfolio.git](https://github.com/danish-rizwan-dev/portfolio.git)
+=======
+   git clone [https://github.com/danish-rizwan-dev/portfolio.git](https://github.com/danish-rizwan-dev/portfolio.git)
+>>>>>>> 225e25553518430788627867129cdb5a4b6f8116
