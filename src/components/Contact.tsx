@@ -1,37 +1,36 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { Button } from "@/components/ui/button";
-import { Mail, Github, Linkedin, MessageCircle } from "lucide-react";
+import { Mail, Github, Linkedin, MessageCircle, Phone } from "lucide-react";
 
-// 1. Move data outside to prevent re-declaration on every render
+// 1. Professional contact data for Danish Rizwan
 const CONTACT_METHODS = [
   {
     icon: Mail,
     label: "Email",
-    value: "raazraz621@gmail.com",
-    href: "mailto:raazraz621@gmail.com",
+    value: "danishriz987@gmail.com",
+    href: "mailto:danishriz987@gmail.com",
+  },
+  {
+    icon: Phone,
+    label: "Phone",
+    value: "+91 8287805596",
+    href: "tel:+918287805596",
   },
   {
     icon: Github,
     label: "GitHub",
-    value: "@gitmen321",
-    href: "https://github.com/gitmen321",
+    value: "danish-rizwan-dev",
+    href: "https://github.com/danish-rizwan-dev",
   },
   {
     icon: Linkedin,
     label: "LinkedIn",
-    value: "Raaz",
-    href: "https://www.linkedin.com/in/raaz-ch-a77535277/",
-  },
-  {
-    icon: MessageCircle,
-    label: "WhatsApp",
-    value: "+91 9605633156",
-    href: "https://wa.me/919605633156",
+    value: "Danish Rizwan",
+    href: "https://www.linkedin.com/in/danish-rizwan-050539258/",
   },
 ];
 
-// 2. Define variants for cleaner Framer Motion usage
 const fadeInUp = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
@@ -47,7 +46,6 @@ export const Contact = () => {
 
   return (
     <section id="contact" ref={ref} className="py-24 relative overflow-hidden">
-      {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-hero" />
       <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent" />
       
@@ -64,7 +62,7 @@ export const Contact = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-nature mx-auto rounded-full mb-6" />
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Have a project in mind or want to collaborate? Reach out through any of these channels.
+            Ready to collaborate on your next web project? Reach out through any of these channels.
           </p>
         </motion.div>
 
@@ -79,7 +77,7 @@ export const Contact = () => {
               animate={isInView ? "visible" : "hidden"}
               variants={fadeInUp}
               custom={index + 1}
-              aria-label={`Contact me via ${method.label}`}
+              aria-label={`Contact Danish Rizwan via ${method.label}`}
               className="group relative bg-card/40 backdrop-blur-sm border border-border rounded-2xl p-6 hover:border-primary/50 transition-all duration-300 hover:shadow-glow hover:-translate-y-1"
             >
               <div className="flex items-center gap-4">
@@ -105,14 +103,14 @@ export const Contact = () => {
           className="text-center"
         >
           <Button variant="hero" size="lg" asChild className="text-lg px-8 py-6">
-            <a href="https://wa.me/919605633156" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/918287805596" target="_blank" rel="noopener noreferrer">
               <MessageCircle className="w-5 h-5 mr-2" />
               Start a Conversation
             </a>
           </Button>
         </motion.div>
 
-        {/* Footer */}
+        {/* Footer with updated name and year */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={isInView ? { opacity: 1 } : { opacity: 0 }}
@@ -120,7 +118,7 @@ export const Contact = () => {
           className="text-center mt-20 pt-8 border-t border-border/50"
         >
           <p className="text-muted-foreground text-sm">
-            © {new Date().getFullYear()} Raaz. Built with passion for smooth experiences.
+            © {new Date().getFullYear()} Danish Rizwan. Built with passion for smooth experiences.
           </p>
         </motion.div>
       </div>
