@@ -31,17 +31,6 @@ export const Experience = () => {
       ],
       gradient: "from-accent to-web3-blue",
     },
-    {
-      company: "White Matrix Solutions",
-      role: "Mobile App Developer",
-      period: "2024 September - 2025 June",
-      achievements: [
-        "Engineered production-ready Flutter applications with optimized load times and performance.",
-        "Designed efficient RESTful APIs and database schemas for mobile synchronization.",
-        "Integrated real-time location tracking features and collaborated on cross-functional feature delivery.",
-      ],
-      gradient: "from-primary to-accent",
-    },
   ];
 
   return (
