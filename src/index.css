@@ -1,0 +1,147 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Nature base - Deep teal to emerald (Dark Mode) */
+    --background: 195 100% 4%;
+    --foreground: 160 40% 95%;
+
+    --card: 195 80% 6%;
+    --card-foreground: 160 40% 95%;
+
+    --popover: 195 80% 6%;
+    --popover-foreground: 160 40% 95%;
+
+    /* Primary - Nature teal/green */
+    --primary: 174 62% 47%;
+    --primary-foreground: 195 100% 4%;
+
+    /* Secondary - Deeper teal */
+    --secondary: 186 54% 22%;
+    --secondary-foreground: 160 40% 95%;
+
+    --muted: 186 40% 15%;
+    --muted-foreground: 160 20% 60%;
+
+    /* Accent - Web3 neon purple */
+    --accent: 270 80% 60%;
+    --accent-foreground: 160 40% 95%;
+
+    /* Web3 electric blue accent */
+    --web3-blue: 195 100% 60%;
+    
+    /* Spotlight glow */
+    --glow: 174 100% 50%;
+    
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 160 40% 95%;
+
+    --border: 186 40% 18%;
+    --input: 186 40% 15%;
+    --ring: 174 62% 47%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-nature: linear-gradient(135deg, hsl(174 62% 47%) 0%, hsl(160 70% 45%) 100%);
+    --gradient-web3: linear-gradient(135deg, hsl(270 80% 60%) 0%, hsl(195 100% 60%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(174 62% 47% / 0.15), transparent 50%),
+                      radial-gradient(ellipse at bottom, hsl(270 80% 60% / 0.1), transparent 50%);
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(174 100% 50% / 0.3);
+    --shadow-purple: 0 0 40px hsl(270 80% 60% / 0.3);
+    --shadow-card: 0 10px 40px hsl(195 100% 4% / 0.5);
+    
+    /* Animations */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .light {
+    /* Light mode - Nature inspired with bright backgrounds */
+    --background: 160 60% 97%;
+    --foreground: 195 80% 10%;
+
+    --card: 160 40% 99%;
+    --card-foreground: 195 80% 10%;
+
+    --popover: 160 40% 99%;
+    --popover-foreground: 195 80% 10%;
+
+    /* Primary - Nature teal/green (slightly darker for light mode) */
+    --primary: 174 62% 40%;
+    --primary-foreground: 160 60% 97%;
+
+    /* Secondary - Light teal */
+    --secondary: 174 40% 85%;
+    --secondary-foreground: 195 80% 15%;
+
+    --muted: 174 30% 92%;
+    --muted-foreground: 195 40% 40%;
+
+    /* Accent - Web3 purple (slightly deeper for contrast) */
+    --accent: 270 70% 55%;
+    --accent-foreground: 160 60% 97%;
+
+    /* Web3 electric blue */
+    --web3-blue: 195 100% 50%;
+    
+    /* Spotlight glow */
+    --glow: 174 100% 45%;
+    
+    --destructive: 0 84% 50%;
+    --destructive-foreground: 160 60% 97%;
+
+    --border: 174 30% 85%;
+    --input: 174 30% 90%;
+    --ring: 174 62% 40%;
+
+    /* Gradients for light mode */
+    --gradient-nature: linear-gradient(135deg, hsl(174 62% 40%) 0%, hsl(160 70% 38%) 100%);
+    --gradient-web3: linear-gradient(135deg, hsl(270 70% 55%) 0%, hsl(195 100% 50%) 100%);
+    --gradient-hero: radial-gradient(ellipse at top, hsl(174 62% 40% / 0.08), transparent 50%),
+                      radial-gradient(ellipse at bottom, hsl(270 70% 55% / 0.06), transparent 50%);
+    
+    /* Shadows for light mode */
+    --shadow-glow: 0 0 40px hsl(174 100% 45% / 0.2);
+    --shadow-purple: 0 0 40px hsl(270 70% 55% / 0.2);
+    --shadow-card: 0 10px 40px hsl(195 80% 10% / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Loader animation for Spline fallback */
+  .loader {
+    width: 48px;
+    height: 48px;
+    border: 3px solid hsl(var(--primary));
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    animation: rotation 1s linear infinite;
+  }
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
