@@ -14,7 +14,7 @@ export const Skills = () => {
     },
     {
       title: "Backend & Cloud",
-      skills: ["Node.js", "Express.js", "Supabase", "MongoDB", "REST APIs", "Clerk Auth"],
+      skills: ["Node.js", "Express.js", "Supabase", "MongoDB", "MySQL", "REST APIs", "Clerk Auth"],
       color: "accent",
     },
     {
